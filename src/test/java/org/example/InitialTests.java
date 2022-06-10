@@ -14,12 +14,12 @@ public class InitialTests extends TestBase {
     @Test
     public void search()
     {
-        GoogleMainPage homePage = new GoogleMainPage(driver);
         driver.get(GoogleMainPage.mainURL);
 
-        homePage.doSearch("С‚РѕРІР°СЂС‹ РґР»СЏ РґРѕРјР°");
-        Assert.assertEquals("С‚РѕРІР°СЂС‹ РґР»СЏ РґРѕРјР° - РџРѕРёСЃРє РІ Google", driver.getTitle());
-    }
+        GoogleMainPage homePage = new GoogleMainPage(driver);
+        homePage.doSearch("товары для дома");
 
+        Assert.assertEquals("товары для дома - Поиск в Google", driver.getTitle());
+    }
 }
 

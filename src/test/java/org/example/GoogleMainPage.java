@@ -7,15 +7,16 @@ import org.openqa.selenium.WebElement;
 
 public class GoogleMainPage {
 
-    private WebDriver driver;
     public static String mainURL = "https://www.google.com/";
+
+    private WebDriver driver;
 
     public GoogleMainPage(WebDriver driver) {
         this.driver = driver;
     }
 
     public void doSearch(String query) {
-        WebElement searchBox = driver.findElement(By.xpath("//input[@aria-label='РќР°Р№С‚Рё']"));
+        WebElement searchBox = driver.findElement(By.xpath("//input[@aria-label='Найти']"));
 
         searchBox.sendKeys(query);
         searchBox.sendKeys(Keys.ENTER);
