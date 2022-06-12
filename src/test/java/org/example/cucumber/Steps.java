@@ -41,6 +41,13 @@ public class Steps {
         homePage.doSearch(searchString);
     }
 
+    @Когда("пользователь нажимает кнопку Войти")
+    public void пользователь_нажимает_кнопку_Войти()
+    {
+        GoogleMainPage homePage = new GoogleMainPage(driver);
+        homePage.pressLoginAccountButton();
+    }
+
     @After
     public void tearDown()
     {
