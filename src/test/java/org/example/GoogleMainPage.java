@@ -1,16 +1,8 @@
 package org.example;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.devtools.v85.input.model.MouseButton;
-
-import java.awt.event.MouseAdapter;
+import org.openqa.selenium.*;
 
 public class GoogleMainPage {
-
-    public static String mainURL = "https://www.google.com/";
 
     private WebDriver driver;
 

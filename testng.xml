@@ -4,7 +4,7 @@
     <test name="Tests">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="org.example.InitialTests"/>
+<!--            <class name="org.example.InitialTests"/>-->
             <class name="org.example.cucumber.RunnerTests"/>
         </classes>
     </test>
