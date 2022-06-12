@@ -1,19 +1,17 @@
 package org.example;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Parameters;
 
 
 public class TestBase {
 
     public WebDriver driver;
 
-    @Parameters("browser")
-    @BeforeClass
+    @BeforeMethod
+    @Parameters({"browser"})
     public void setUp(String browser)
     {
         switch(browser) {
@@ -26,7 +24,7 @@ public class TestBase {
         }
     }
 
-    @AfterClass
+    @AfterMethod
     public void tearDown()
     {
         driver.quit();
