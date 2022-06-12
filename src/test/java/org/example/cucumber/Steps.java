@@ -25,23 +25,18 @@ public class Steps {
         }
     }
 
-    @Когда("пользователь переходит по ссылке {string}")
-    public void пользователь_переходит_по_ссылке(String link) {
+    @РљРѕРіРґР°("РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РїРµСЂРµС…РѕРґРёС‚ РїРѕ СЃСЃС‹Р»РєРµ {string}")
+    public void РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ_РїРµСЂРµС…РѕРґРёС‚_РїРѕ_СЃСЃС‹Р»РєРµ(String link) {
         driver.get(link);
     }
 
-    @Тогда("заголовок страницы есть {string}")
-    public void заголовок_страницы_есть(String title) {
+    @РўРѕРіРґР°("Р·Р°РіРѕР»РѕРІРѕРє СЃС‚СЂР°РЅРёС†С‹ РµСЃС‚СЊ {string}")
+    public void Р·Р°РіРѕР»РѕРІРѕРє_СЃС‚СЂР°РЅРёС†С‹_РµСЃС‚СЊ(String title) {
         Assert.assertEquals(title, driver.getTitle());
     }
 
-    @Дано("пользователь открывает строку поиска по ссылке {string}")
-    public void пользователь_открывает_строку_поиска_по_ссылке(String link) {
-        driver.get(link);
-    }
-
-    @Когда("пользователь делает запрос {string}")
-    public void пользователь_делает_запрос(String searchString) {
+    @РљРѕРіРґР°("РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РґРµР»Р°РµС‚ Р·Р°РїСЂРѕСЃ {string}")
+    public void РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ_РґРµР»Р°РµС‚_Р·Р°РїСЂРѕСЃ(String searchString) {
         GoogleMainPage homePage = new GoogleMainPage(driver);
         homePage.doSearch(searchString);
     }

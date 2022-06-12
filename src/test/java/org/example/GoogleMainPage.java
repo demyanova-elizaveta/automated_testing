@@ -16,7 +16,7 @@ public class GoogleMainPage {
     }
 
     public void doSearch(String query) {
-        WebElement searchBox = driver.findElement(By.xpath("//input[@aria-label='Найти']"));
+        WebElement searchBox = driver.findElement(By.xpath("//input[@aria-label='РќР°Р№С‚Рё']"));
 
         searchBox.sendKeys(query);
         searchBox.sendKeys(Keys.ENTER);

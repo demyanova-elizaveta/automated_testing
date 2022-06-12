@@ -17,9 +17,9 @@ public class InitialTests extends TestBase {
         driver.get(GoogleMainPage.mainURL);
 
         GoogleMainPage homePage = new GoogleMainPage(driver);
-        homePage.doSearch("товары для дома");
+        homePage.doSearch("С‚РѕРІР°СЂС‹ РґР»СЏ РґРѕРјР°");
 
-        Assert.assertEquals("товары для дома - Поиск в Google", driver.getTitle());
+        Assert.assertEquals("С‚РѕРІР°СЂС‹ РґР»СЏ РґРѕРјР° - РџРѕРёСЃРє РІ Google", driver.getTitle());
     }
 }
 
